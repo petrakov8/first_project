@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1193.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="FXMLController">
+   <children>
+      <AnchorPane prefHeight="736.0" prefWidth="200.0" style="-fx-background-color: #F05C5B;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TextField fx:id="filterField" layoutX="15.0" layoutY="200.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Text layoutX="14.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="113.13671875">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="124.0" prefWidth="1193.0" style="-fx-background-color: #566275;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="29.0" layoutY="29.0" prefHeight="46.0" prefWidth="308.0" text="information about swing &amp; javafx classes">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.15129999816417694" green="0.8899999856948853" blue="0.2682165503501892" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.9814814925193787" blue="0.9814814925193787" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_info" layoutX="228.0" layoutY="134.0" prefHeight="595.0" prefWidth="959.0" style="-fx-border-color: brown; -fx-background-radius: 10;">
+        <columns>
+            <TableColumn fx:id="col_id" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="col_kind" prefWidth="111.0" text="class kind" />
+          <TableColumn fx:id="col_class" prefWidth="111.0" text="class name" />
+          <TableColumn fx:id="coll_info" prefWidth="734.0" text="about this class" />
+        </columns>
+         <effect>
+            <Blend />
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>
